@@ -17,10 +17,17 @@
         <label for="nav-input" class="nav-toggle"><span class="nav-icon"> </span></label>
 
         <nav>
-            <ul>
+            <ul class="first-ul">
                 <li><a href=""> home</a></li>
-                <li><a href=""> news</a></li>
-                <li><a href=""> hedge fund</a></li>
+                <li><a href="news.html"> news</a></li>
+                <li><a href="#" class="display-fund"> hedge fund ˅ </a>
+                    <ul class="second-ul">
+                        <li><a href="#"> real esatate</a></li>
+                        <li><a href="#"> agric </a></li>
+                        <li><a href="#"> oil mill Factory </a></li>
+                    </ul>
+
+                </li>
                 <li><a href=""> copy trading </a></li>
                 <li><a href=""> bot trading</a></li>
             </ul>
@@ -50,7 +57,7 @@
                 </button>
             </div>
         </section>
-       
+
 
     </main>
 
@@ -88,7 +95,96 @@
 
     </aside>
 
+    <div id="practical">
+        <p class="newp">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum. </p>
+        <p class="newp">
+            Why do we use it?
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+            letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+            desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+            search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
+            over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        </p>
 
+    </div>
+
+    <button id="showmore" class="practical-btn">
+        show more
+    </button>
+
+
+            <div id="message">
+                <div>
+                    <p>creativity is key</p>
+                    <p>Never give up</p>
+                </div>
+            </div>
+
+
+            <div id="diff">
+
+            </div>
+
+            <form action=""  id="form2"  name="exform">
+                value 1: <input type="text" value=""  name="val1"><br>
+                value 2: <input type="text" value="" name="val2"> <br>
+                value 3 :<select   name="operator" id="op2"> 
+                    <option  value ="add"> add</option>
+                    <option value ="mul"> multiply</option>
+                    <option value ="div"> division</option>
+                    <option value ="min">subtract</option>
+
+                </select>
+
+                <button type="button" id="cal" name="calt"> calculate </button>
+
+
+            </form>
+
+
+
+
+
+
+            <form action="#" id="my-form" name="myform">
+                <label for="name">Your name</label>
+                <input type="text" name="name"> <br>
+                <label  name="cars"> Cars </label><br>
+                <input type="checkbox" name="Toyota" value="toyota"> Toyota<br>
+                <input type="checkbox" name="Benz"   value = "Benz"> Benz<br>
+                <input type="checkbox" name="Volvo"   value="volv0"> Volvo <br>
+                <label for="colours"> select colour</label>
+                <select name="colours" id="">
+                    <option > red</option>
+                    <option > green</option>
+                    <option > white</option>
+
+                </select><br>
+                <input type="submit" value="submit" for="submit">
+
+            </form>
+
+            <div id="error" style="color: red">
+            </div>
+
+            <div id="allp">
+                <p>home</p>
+                <p>church</p>
+                <p>mosque</p>
+                <p>school</p>
+                <p>office</p>
+            </div>
+            
+
+            <script src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+            <script src="rough.js"></script>
 
 
 

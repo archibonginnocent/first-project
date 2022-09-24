@@ -3,7 +3,9 @@
     padding: 0;
 }
 
-body {}
+body {
+    
+}
 
 .header {
     background-color: black;
@@ -22,7 +24,7 @@ body {}
 
 }
 
-nav ul {
+nav > ul {
     display: none;
     flex-direction: column;
 
@@ -34,6 +36,21 @@ nav ul li {
     padding: 10px 5px;
     margin-left: 5px;
 }
+
+
+nav .second-ul {
+    display: none;
+    margin: 30px;
+    margin-top: 0;
+
+}
+
+nav .display-fund:hover ~  .second-ul,
+nav .display-fund:focus ~  .second-ul{
+    display: flex;
+    
+}
+
 
 nav a {
     text-decoration: none;
@@ -112,7 +129,7 @@ nav a:hover {
 
 }
 
-.header .nav-input:checked~nav ul,
+.header .nav-input:checked~nav>ul,
 .header .nav-input:checked~nav .button-li {
     display: flex;
 }
@@ -145,7 +162,7 @@ nav a:hover {
 .index-main-body {
     display: flex;
     flex-direction: column;
-  
+
 
 
 
@@ -154,7 +171,7 @@ nav a:hover {
 
 .index-banner {
     width: 100%;
-    height: calc(100vh - 110px);
+    height: calc(100vh - auto);
     background-image: url('vid/banners6.jpg');
     background-size: cover;
     background-position: center;
@@ -162,7 +179,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-   
+
 
 
 
@@ -180,26 +197,24 @@ nav a:hover {
 }
 
 
-.btn-ms{
+.btn-ms {
     border-radius: 8px;
     font-size: 24px;
     background-color: goldenrod;
     margin: 40px 22px;
-    
+
 }
 
-.btn-ms li{
+.btn-ms li {
     list-style: none;
     text-transform: uppercase;
-    
+
 }
 
-.btn-ms a{
+.btn-ms a {
     padding: 10px;
-    
     text-decoration: none;
-    color: #111
-
+    color: #111;
 }
 
 
@@ -316,10 +331,10 @@ nav a:hover {
 
 
     .service-div {
-        height:100vh;
+        height: 100vh;
         justify-content: space-around;
     }
-    
+
 
 
     .con-div {
@@ -328,15 +343,15 @@ nav a:hover {
         height: 30%;
         background-color: whitesmoke;
         box-shadow: 5px 3px 8px;
-    
+
     }
 
     .con-div h1 {
         padding-top: 10px;
         font-size: 40px;
         font-weight: 900;
-        
-    
+
+
     }
 
 
@@ -363,10 +378,38 @@ nav a:hover {
         margin-left: -40px;
     }
 
-    nav ul {
+
+    
+    nav .second-ul li {
+        text-transform: uppercase;
+    }
+
+    nav  ul {
         display: flex;
         flex-direction: row;
+        align-items: center;
     }
+
+    .div-4-ul{
+        display: flex;
+    }
+
+
+    .sec-div-ul{
+        display: flex;
+        align-items: center;
+    }
+
+
+    .display-fund:hover~.second-ul,
+    .display-fund:focus~.second-ul,
+    .second-ul:hover {
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+
+    }
+
 
     nav a {
         font-size: 18px;
@@ -374,6 +417,17 @@ nav a:hover {
         color: white;
         display: block;
         padding: 20px 5px;
+    }
+
+
+    nav .second-ul {
+        position: absolute;
+
+        opacity: 0;
+        visibility: hidden;
+        flex-direction: column;
+        background-color: #111;
+        margin-left: 3px;
     }
 
     .button-li {
@@ -390,6 +444,7 @@ nav a:hover {
     }
 
     .button-div {
+        align-items: center;
         justify-content: end;
 
     }
@@ -416,13 +471,13 @@ nav a:hover {
         margin-left: 10.24%;
     }
 
-    
-    .btn-m{
+
+    .btn-m {
         margin-left: 10.24%;
-      
+
     }
 
-    .btn-m a{
+    .btn-m a {
         padding: 20px;
         margin: 20px;
     }
@@ -435,11 +490,11 @@ nav a:hover {
         align-items: center;
         justify-content: initial;
         margin: 0px 10%;
-       
-     
+
+
     }
 
-    
+
     .con-div {
         max-width: 400px;
         width: 250px;
@@ -448,19 +503,93 @@ nav a:hover {
         box-shadow: 5px 3px 8px;
         justify-content: space-between;
         padding: 0px 10px;
-    
-    }
 
-    .con-div2{
-     
     }
 
 
+    #practical{
+        max-height: 200px;
+        max-width: 150px;
+        overflow: hidden;
+        background-color: gray;
+        margin: 0px auto;
+        transition: max-height 0.7s;
 
+    }
+
+    #practical.open{
+        max-height: 1000px;
+        /* max-width: 500px ; */
+        transition: max-height 0.7s;
+    }
+
+    .newp{
+
+    }
+
+
+    #showmore{
+       font-size: 24px;
+       text-transform: uppercase;
+       text-decoration: none;
+    }
     
 
-    
-   
+    .practical-btn{
+        border-radius: 4px 6px;
+        margin: 0px auto;
+        padding: 10px;
+        display: block;
+    }
+
+    #message{
+
+        background-color: red;
+        width: 500px;
+        height: 300px;
+        display: flex;
+        margin: 0 auto;
+        opacity: 0;
+        transition: opacity 0.7s;
+    }
+
+    #message.display{
+        opacity: 1;
+        transition: opacity 0.7s;
+    }
+
+    #message p {
+        font-size: 30px;
+    }
+
+    #message div {
+        margin: auto;
+    }
+
+    #diff{
+        width: 400px;
+        height: 300px;
+        background: gray;
+    }
+
+
+    #my-form{
+        font-size: 30px;
+    }
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
 
 
 
